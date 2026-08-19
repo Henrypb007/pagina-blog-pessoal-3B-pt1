@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Games e Automobilismo</title>
+    <style>
+        header{
+            background-color: rgb(0, 255, 162);
+            color: rgb(67, 53, 123);
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        main{
+            background-color: rgb(255, 194, 125);
+            color:black;
+            margin: auto;
+            padding: 15px;
+        }
+
+        img{
+            width: 80px;
+            height: 80px;
+        }
+
+        .direitos{
+            text-align: center;
+            color: darkblue;
+        }
+
+        .artigo{
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Blog Games e Automobilismo</h1>
+        <p>Jogos de Videogame e Automobilismo</p>
+    </header>
+    
+    <main>
+
+        <article>
+            <img src="primeiro.png">
+            <div>
+                <h2>Top 10 - Jogos de Videogame</h2>
+                <p class="artigo">Por: Henry Pietro</p>
+
+                <ul>
+                    <li>1º - Minecraft</li>
+                    <li>2º - Grand Theft Auto V</li>
+                    <li>3º - The Legend of Zelda: Breath of the Wild</li>
+                    <li>4º - Red Dead Redemption 2</li>
+                    <li>5º - God of War</li>
+                    <li>6º - Super Mario Bros.</li>
+                    <li>7º - Fortnite</li>
+                    <li>8º - EA Sports FC</li>
+                    <li>9º - Forza Horizon 5</li>
+                    <li>10º - Need for Speed</li>
+                </ul>
+
+                <button>👍<span>0</span></button>
+                <button>💩<span>0</span></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="segundo.png">
+            <div>
+                <h2>O mundo do Automobilismo</h2>
+                <p class="artigo">Por: Henry Pietro</p>
+
+                <p>
+                    O automobilismo é um esporte que envolve velocidade,
+                    tecnologia, estratégia e muita habilidade dos pilotos.
+                    Existem diversas categorias de corridas, como a Fórmula 1,
+                    NASCAR, IndyCar, WEC e Stock Car. Os carros utilizados
+                    nessas competições possuem tecnologias avançadas para
+                    melhorar o desempenho, a segurança e a velocidade.
+                    Além dos pilotos, as equipes de automobilismo contam com
+                    engenheiros e mecânicos que trabalham para deixar os
+                    carros cada vez mais rápidos e competitivos.
+                </p>
+
+                <button>👍<span>0</span></button>
+                <button>💩<span>0</span></button>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        <p class="direitos">
+            Todos os direitos estão reservados ao autor Henry Pietro.
+        </p>
+    </footer>
+
+</body>
+
+<script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function (botao) {
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+
+            if (curtiu === false) {
+                texto.textContent++;
+                curtiu = true;
+            } else {
+                texto.textContent--;
+                curtiu = false;
+            }
+        }
+    });
+</script>
+
+</html>
